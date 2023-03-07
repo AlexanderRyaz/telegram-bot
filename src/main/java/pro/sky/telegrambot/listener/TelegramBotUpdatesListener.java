@@ -32,7 +32,7 @@ public class TelegramBotUpdatesListener implements UpdatesListener {
             logger.info("Processing update: {}", update);
             if ("/start".equals(update.message().text())) {
                 SendMessage message = new SendMessage(update.message().chat().id(), "Hello!");
-                SendResponse response = telegramBot.execute(message);
+                telegramBot.execute(message);
             }
 
         });
