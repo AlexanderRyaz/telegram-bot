@@ -2,9 +2,7 @@ package pro.sky.telegrambot.model;
 
 import lombok.Data;
 
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
 import java.time.LocalDateTime;
 
 @Entity
@@ -12,6 +10,7 @@ import java.time.LocalDateTime;
 @Data
 public class NotificationTask {
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private Long chatId;
     private String text;

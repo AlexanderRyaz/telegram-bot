@@ -57,7 +57,7 @@ public class TelegramBotUpdatesListener implements UpdatesListener {
             task.setChatId(messageId);
             task.setText(item);
             task.setSentAt(LocalDateTime.parse(date, DateTimeFormatter.ofPattern("dd.MM.yyyy HH:mm")));
-            Integer i = 0;
+            repository.save(task);
         }
     }
 }
